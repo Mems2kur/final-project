@@ -1,0 +1,62 @@
+{
+  "fees": [
+    { "id": 1, "name": "University Registration", "amount": 12000 },
+    { "id": 2, "name": "Entrepreneurial Charges", "amount": 3000 },
+    { "id": 3, "name": "SIWES Administration", "amount": 2000 },
+    { "id": 4, "name": "Engineering Lab Fee", "amount": 15000 },
+    { "id": 5, "name": "ICT Charges", "amount": 5000 },
+    { "id": 6, "name": "Health Insurance", "amount": 3500 },
+    { "id": 7, "name": "Library Services", "amount": 3000 }
+  ],
+
+  "transactions": [
+    {
+      "id": 1697048400000,
+      "date": "2025-01-11",
+      "description": "Part Payment",
+      "amount": 25000,
+      "status": "Successful"
+    },
+    {
+      "id": 1699650400000,
+      "date": "2025-02-15",
+      "description": "Library Fee",
+      "amount": 3000,
+      "status": "Successful"
+    }
+  ],
+
+  "courses": [
+    { "id": 1, "code": "ENG101", "title": "Introduction to Engineering", "unit": 3 },
+    { "id": 2, "code": "MTH101", "title": "Calculus I", "unit": 3 },
+    { "id": 3, "code": "PHY101", "title": "General Physics I", "unit": 3 },
+    { "id": 4, "code": "CHM101", "title": "General Chemistry", "unit": 3 },
+    { "id": 5, "code": "ENG201", "title": "Engineering Drawing", "unit": 2 },
+    { "id": 6, "code": "EEE201", "title": "Basic Electrical Engineering", "unit": 3 },
+    { "id": 7, "code": "MEC202", "title": "Engineering Mechanics", "unit": 3 }
+  ],
+
+  "results": [
+    {
+      "courseCode": "ENG101",
+      "courseTitle": "Introduction to Engineering",
+      "unit": 3,
+      "score": 78,
+      "grade": "A"
+    },
+    {
+      "courseCode": "MTH101",
+      "courseTitle": "Calculus I",
+      "unit": 3,
+      "score": 64,
+      "grade": "B"
+    },
+    {
+      "courseCode": "PHY101",
+      "courseTitle": "General Physics I",
+      "unit": 3,
+      "score": 59,
+      "grade": "C"
+    }
+  ]
+}
