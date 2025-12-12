@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { getFees, getTransactions } from "../middle/services/Api";
 import { useNavigate } from "react-router-dom";
+import data from "../middle/dataB.json"; // Import JSON directly
+
 function Fees() {
   const [fees, setFees] = useState([]);
   const [transactions, setTransactions] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    getFees().then(res => setFees(res.data));
-    getTransactions().then(res => setTransactions(res.data));
+    // Load data directly from JSON
+    setFees(data.fees || []);
+    setTransactions(data.transactions || []);
   }, []);
 
   // Calculate totals
@@ -58,7 +60,10 @@ function Fees() {
 
       {/* Proceed to Payment */}
       <div className="mt-6">
-        <button onClick={() => navigate("/Payment")} className="bg-purple-900 text-white p-3 rounded-lg hover:bg-indigo-700 transition">
+        <button
+          onClick={() => navigate("/Payment")}
+          className="bg-purple-900 text-white p-3 rounded-lg hover:bg-indigo-700 transition"
+        >
           Proceed to Make Payment
         </button>
       </div>

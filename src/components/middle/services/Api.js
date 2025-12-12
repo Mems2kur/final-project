@@ -1,8 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000";
-
-export const getFees = () => axios.get(`${API_URL}/fees`);
-export const getTransactions = () => axios.get(`${API_URL}/transactions`);
-export const getCourses = () => axios.get(`${API_URL}/courses`);
-export const getResults = () => axios.get(`${API_URL}/results`);
+export const getFees = () => axios.get("/api/fees").then(res => res.data);
+export const getTransactions = () => axios.get("/api/transactions");
+export const getCourses = () => axios.get("/api/courses");
+export const getResults = () => axios.get("/api/results");

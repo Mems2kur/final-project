@@ -1,15 +1,15 @@
 
 import React, { useEffect, useState } from "react";
 import { CreditCard, BookOpen, Calendar, Star } from "lucide-react";
-import { getCourses, getResults } from "../middle/services/Api"; // your API calls
+import data from "../middle/dataB.json"
 
 function OverView() {
-  const [courses, setCourses] = useState([]);
+ const [courses, setCourses] = useState([]);
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    getCourses().then((res) => setCourses(res.data));
-    getResults().then((res) => setResults(res.data));
+    setCourses(data.courses || []);
+    setResults(data.results || []);
   }, []);
 
   // Registered Courses

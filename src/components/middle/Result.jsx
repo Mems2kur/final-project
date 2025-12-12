@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { getResults } from "../middle/services/Api";
+// Results.jsx
+import React from "react";
+import data from "../middle/dataB.json"; // import your JSON directly
 
 function Results() {
-  const [results, setResults] = useState([]);
-
-  useEffect(() => {
-    getResults().then(res => setResults(res.data));
-  }, []);
+  const results = data.results; // use JSON directly
 
   // Optional: Calculate GPA (weighted by unit)
   const gradePoints = {

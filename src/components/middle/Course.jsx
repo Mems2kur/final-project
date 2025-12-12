@@ -1,13 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { getCourses } from "../middle/services/Api";
+// Courses.jsx
+import React from "react";
+import data from "../middle/dataB.json" // Direct import
 
 function Courses() {
-  const [courses, setCourses] = useState([]);
-
-  useEffect(() => {
-    getCourses().then((res) => setCourses(res.data));
-  }, []);
-
+  const courses = data.courses; // use JSON directly
   const totalUnits = courses.reduce((sum, c) => sum + c.unit, 0);
 
   return (

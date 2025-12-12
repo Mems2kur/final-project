@@ -1,16 +1,12 @@
 // Transactions.jsx
-import React, { useEffect, useState, useRef } from "react";
-import { getTransactions } from "../middle/services/Api";
-import TransactionReceipt from "../middle/Reciepts/TransactionReceipt"
+import React, { useRef } from "react";
+import data from "../middle/dataB.json" // Direct import of JSON
+import TransactionReceipt from "../middle/Reciepts/TransactionReceipt";
 import { downloadPDF } from "../utils/pdf";
 
 function Transactions() {
-  const [transactions, setTransactions] = useState([]);
+  const transactions = data.transactions; // use JSON directly
   const receiptRef = useRef(null); // reference for the PDF container
-
-  useEffect(() => {
-    getTransactions().then((res) => setTransactions(res.data));
-  }, []);
 
   return (
     <div className="p-6">
@@ -66,7 +62,7 @@ function Transactions() {
       {/* Download PDF Button */}
       {transactions.length > 0 && (
         <button
-          className="mt-6 bg-purple-900 text-white p-3 rounded-lg"
+          className="mt-6 bg-purple-900 text-white p-3 rounded-lg hover:bg-indigo-700 transition"
           onClick={async () => {
             if (!receiptRef.current) return;
             await downloadPDF(receiptRef.current, "All_Transactions");
