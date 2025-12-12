@@ -55,7 +55,7 @@ function OverView() {
       id: 3,
       icon: <Calendar className="w-8 h-8 text-yellow-500" />,
       heading: "Second Semester",
-      number: secondSemesterCourses,
+      number: 2,
     },
     {
       id: 4,
